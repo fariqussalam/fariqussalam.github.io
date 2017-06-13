@@ -11,20 +11,19 @@ safe: true
 
 
 # edit here to achieve your personal greatness
-url: http://username.github.io/
-baseurl: /sustain/
-title: Chris Turner
-author: Chris Turner
-description: Personal blog and resume
+url: http://fariqussalam.github.io/
+baseurl: 
+title: Fariqussalam Site  
+author: Fariqussalam Malik
+description: Fariq Personal blog and resume
 avatar: profile.png
-email: yourname@email.com
-github: biomadeira/sustain # username
-twitter: username
-linkedin: username
-stackoverflow: username   #e.g: users/2735833/proton1h1
+email: fariqussalam@live.com
+github: fariqussalam # username
+twitter: fariqussalam
+linkedin: 
+stackoverflow: users/7478803/fariqussalam-malik   #e.g: users/2735833/proton1h1
 #Comment out if you don't want disqus 
-disqus: username
-google_analytics: UA-69391421-1
+# disqus: username
 
 
 # needed for travis-ci build
