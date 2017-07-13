@@ -21,7 +21,9 @@ email: fariqussalam@live.com
 github: fariqussalam # username
 twitter: fariqussalam
 linkedin: 
-stackoverflow: users/7478803/fariqussalam-malik   #e.g: users/2735833/proton1h1
+stackoverflow: users/7478803/fariqussalam-malik
+google_analytics: UA-61983322-1
+#e.g: users/2735833/proton1h1
 #Comment out if you don't want disqus 
 # disqus: username
 
