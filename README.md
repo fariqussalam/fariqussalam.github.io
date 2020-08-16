@@ -1,63 +1,131 @@
+## About
+Monochrome is a minimal, responsive, ready to use Jekyll theme for blogging. [Demo](https://dyutibarma.github.io/monochrome/)
+(Built on top of Emerald Jekyll theme)
 
-# Sustain
+## Features
 
-[![Build Status](https://secure.travis-ci.org/biomadeira/sustain.png?branch=gh-pages)](http://travis-ci.org/biomadeira/sustain)
-[![Ruby](https://img.shields.io/badge/ruby-2.1,_2.2-blue.svg?style=flat)](http://travis-ci.org/biomadeira/sustain)
-[![Jekyll](https://img.shields.io/badge/jekyll-2.4.0,_3.0.0-blue.svg?style=flat)](http://travis-ci.org/biomadeira/sustain)
+- Completely responsive and mobile first
+- Clean SEO friendly URLs, auto-generated from post title (no messy dates in the url)
+- SEO title/description integration
+- Sitemap ready
+- Pagination support
+- Mobile friendly navigation menu
+- Easy customization for header, footer, navigation links, colors, favicon etc
+- Default Monochrome Color Palette - black, white, greys
+- About page
+- 404 page
+- ..and a lot more
 
-Personal blog built with [Bootstrap](http://getbootstrap.com/), powered by [Jekyll](http://jekyllrb.com/) and freely
-hosted in [Github pages](https://pages.github.com/).
+## Install/Setup Jekyll
 
+(Skip if you already have Jekyll 2.2)
 
-## View the live demo
+1. Make sure Ruby 2.2 is installed 
+```
+sudo apt-get install ruby2.2 (sudo apt-get install ruby-full)
+sudo apt-get install ruby2.2-dev
+```
+2. Install bundle: `sudo gem install bundler`
+3. Install jekyll: `sudo gem install jekyll`
 
-[Sustain Live Demo](https://biomadeira.github.io/sustain)
+### Resources
 
-
-## Screenshots
-
-**Home page**
-![home page](https://raw.githubusercontent.com/biomadeira/sustain/gh-pages/assets/images/screen1.png)
-
-**Blog page**
-![blog page](https://raw.githubusercontent.com/biomadeira/sustain/gh-pages/assets/images/screen2.png)
-
-**Post page**
-![post page](https://raw.githubusercontent.com/biomadeira/sustain/gh-pages/assets/images/screen3.png)
-
-**Projects page**
-![project page](https://raw.githubusercontent.com/biomadeira/sustain/gh-pages/assets/images/screen4.png)
-
-
-## How to use it
-
-Simply clone/fork this repository, and then run `jekyll serve` inside the directory.
-Edit the site attributes in *_config.yml* and edit the various entries in *_includes/* and *_posts/*.
-
-
-## Issues and contributing 
-
-I have tested this install with Ruby v2.2.2p95 (Mac OS RVM) and Jekyll v3.0.0. If you run into any problems please log them on the [issue tracker](https://github.com/biomadeira/sustain/issues).
-
-Feel free pull-request your patches and fixes.
-
-#### Contributors
-
-[Sumit Murari](https://github.com/murarisumit), November 2015
+- We found the jekyll tutorials on youtube very quick and useful to get started
+- [Jekyll documentation](http://jekyllrb.com)   
 
 
-## Thanks 
+## Install Monochrome dependencies
 
-Profile picture from [pexels](https://www.pexels.com/photo/portrait-black-african-ethnicity-person-9494/).
+```
+sudo gem install jekyll-paginate
+sudo gem install jekyll-sitemap
+
+```
+
+## Get Started with Monochrome
+
+### Option 1 
+
+- Fork this repository
+- Clone the forked repository to your local machine to make changes: git clone https://github.com/your-github-username/monochrome.git)
+- (Optional) Change the 'baseurl' value in the 'config.yml' file, from '/blog' to your preferred directory/project name (example '/xyz' or '/' to install in root)
+- Run 'jekyll serve' and open browser to 'localhost:4000/blog/' to see your changes
+- (Optional) Host with github pages
+
+Note: If you fork the repository, your version of the repository will not be searchable. If you want searchability, we suggest you use the next option.
 
 
-## Copyright & License
+### Option 2
 
-Copyright (C) 2015 - Released under the MIT License.
+- Simply download the .zip folder from the repository github page
+- Extract the contents from the .zip folder into your local folder
+- cd into monochrome/
+- Run 'jekyll serve' and open browser to 'localhost:4000/blog/' to see your changes
+- Create a repository in github and push the files
+- (Optional) Host with github pages
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+## Write a Post
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+- cd into  ``_posts/``
+- create new file with format yyyy-mm-dd-title-of-post.md
+- add title/description (refer any of the test posts)
+- add markdown and save
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Customization Options
+
+You can customize this layout using instructions below. 
+
+### Header/Footer/Navigation
+
+Set a custom header tag by setting the related option in the ``_config.yml`` file to "true". Then insert your custom code into the ``header-custom.html`` file.
+In the same way, you can customize the footer of the navigation menu, by setting to "true" the related option and put your code into the ``nav-footer-custom.html`` file.
+Moreover select a reverse option that allows to move the navigation menu to the left side, by setting it to "true".
+
+### Colors
+
+The basic colors are set into the ``base.scss`` file:
+- $background-color: used for background and links in the navigation menu
+- $text-color: used for text and title in posts and pages 
+- $text-light-color: used for text lighter than text-color
+- $text-dark-color: used for text darker than text-color
+
+To customize the colors, just set the values in HEX, RGB (or RGBa) or any other format accepted by CSS.
+
+### Navigation menu
+
+The links inside the navigation menu are autogenerated from pages having the layout set to ``page``.
+You can set custom links, by putting in the ``<a>`` tag into the ``link.html`` file.
+
+### Branch
+There are two branches: 
+- ``master``: is for development.
+- ``gh-pages``: is only for demo site.  
+
+### Baseurl
+
+You can change the 'baseurl' value in the 'config.yml' file, from '/monochrome' to your preferred directory/project name (example '/xyz' or '/' to install in root)
+
+### Typography
+
+To maintain the vertical rhythm, it has been applied a **Typographic scale** as a modular scale, with a baseline set to 24px. To maintain this rhythm you need to insert elements like image, video or other contents with a 24px (or multiple) height as refer.
+
+## Resources
+
+- We found the jekyll tutorials on youtube very quick and useful to get started
+- [Jekyll documentation](http://jekyllrb.com)   
+
+## Todo
+
+- Google Analytics integration
+- Footer to stick to bottom even when content is less
+
+## Author
+
+### TheReviewIndex
+
+- Dyuti Barma
+- Web site: [Review Aggregation and Summary Site for India - TheReviewIndex.com](https://thereviewindex.com)
+
+## License
+Released under [MIT License](license.md).

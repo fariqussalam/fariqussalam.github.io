@@ -1,32 +1,39 @@
-# top level stuff you probably don't need to touch
-highlighter: rouge
+# Site settings
+title: Fariq Site
+description: "Fariqussalam Personal Site and Blog"
+url: "https://fariqussalam.github.io"
+author:
+  name: "Fariqussalam Malik"
+  email: "fariqussalam@gmail.com"
+  url: "https://fariqussalam.github.io"
+
+# Build settings
+baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
-rdiscount:
-  extensions: [smart]
-permalink: /:title.html
-paginate: 5
-gems: [jekyll-paginate]
-port: 3000
-safe: true
+source: .
+destination: ./_site
+# permalink: /:title
+paginate: 8
+paginate_path: blog/page:num/
 
+# Default values
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
-# edit here to achieve your personal greatness
-url: http://fariqussalam.github.io/
-baseurl: 
-title: Fariqussalam Site  
-author: Fariqussalam Malik
-description: Fariq Personal blog and resume
-avatar: newprofile.png
-email: fariqussalam@live.com
-github: fariqussalam # username
-twitter: fariqussalam
-linkedin: 
-stackoverflow: users/7478803/fariqussalam-malik
-google_analytics: UA-61983322-1
-#e.g: users/2735833/proton1h1
-#Comment out if you don't want disqus 
-# disqus: username
+# Plugins
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+plugins: [jekyll-paginate]
 
+# Custom variables
+version: "1.0.0"
 
-# needed for travis-ci build
-exclude: [vendor]
+# Options
+custom_header: false
+custom_nav_footer: false
+reverse: false
