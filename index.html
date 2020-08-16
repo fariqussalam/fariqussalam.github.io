@@ -1,17 +1,44 @@
 ---
-layout: home
+layout: default
 ---
+<article id="page">
 
-<section id="about">
-	<div class="container">
-	  <div class="avatar">
-		<img class="img-circle" src="{{ site.baseurl }}static/img/{{ site.avatar }}" alt="Responsive image">
-	  </div>
-	  <h3>I'm <strong>{{ site.author }}</strong>, a Software Engineer.</h3>
-	  <h3>I love all things computer science and maths.</h3>
-	  <h3>Have a look at some of my working <a href="{{ site.baseurl }}projects.html"> projects</a>.</h3>
-	  <h3>For more check out my academic &amp; professional <a href="http://biomadeira.github.io/vitae">Resume</a>.</h3>
-	  <h3>Contact me at <a href="http://twitter.com/{{ site.twitter }}">@{{ site.twitter }}</a> or by <a href="mailto:{{ site.email }}">email</a>.</h3>
-	  {% include social.html %}
-	</div>
-</section>
+	<h4 id="about">Fariqussalam Malik</h4>
+	<p>
+		Software Engineer based in Indonesia. <br>
+		Here you will find my writing and portfolio. <br>
+		Connect with me : <br>
+		<a target="_blank" href="https://github.com/fariqussalam">
+			<ion-icon size="large" name="logo-github"></ion-icon>
+		</a>
+		<a target="_blank" href="https://www.linkedin.com/in/m-fariqussalam-malik/">
+			<ion-icon size="large" name="logo-linkedin"></ion-icon>
+		</a>
+		<a target="_blank" href="mailto:fariqussalam@gmail.com">
+			<ion-icon size="large" name="mail-outline"></ion-icon>
+		</a>
+	</p>
+</article>
+
+<!-- Posts -->
+<!-- <ul id="posts">
+
+	{% for post in paginator.posts %}
+	<li class="post">
+		<h2>
+			<a
+				href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">
+				{%if post.header %}{{ post.header }}
+				{% else %}{{ post.title }}
+				{% endif %}
+			</a>
+		</h2>
+		<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">
+			<i>{{ post.date | date_to_string }}</i>
+		</time>
+		<p>{{ post.content | strip_html | truncatewords:50 }}</p>
+	</li>
+
+	{% endfor %}
+
+</ul> -->
